@@ -28,7 +28,7 @@ abstract class Funcionario {
         this.matricula = matricula;
     }
 
-    abstract Salario calcularSalario();
+    abstract Array calcularSalario();
 }
 
 // nome e matricula, e método abstrato para

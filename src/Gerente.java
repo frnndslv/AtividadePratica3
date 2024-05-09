@@ -1,22 +1,22 @@
 
 public class Gerente extends Funcionario {
-    private float bonusAnual;
+    private double bonusAnual;
     private String eqSobGerencia;
 
     public Gerente() {
     }
 
-    public Gerente(String nome, String matricula, float bonusAnual, String eqSobGerencia) {
-        super(nome, matricula);
+    public Gerente(String nome, String matricula, double bonusAnual, String eqSobGerencia, double salario) {
+        super(nome, matricula, salario);
         this.bonusAnual = bonusAnual;
         this.eqSobGerencia = eqSobGerencia;
     }
 
-    public float getBonusAnual() {
+    public double getBonusAnual() {
         return bonusAnual;
     }
 
-    public void setBonusAnual(float bonusAnual) {
+    public void setBonusAnual(double bonusAnual) {
         this.bonusAnual = bonusAnual;
     }
 
@@ -29,15 +29,21 @@ public class Gerente extends Funcionario {
     }
 
     @Override
-    Sistema calcularSalario() {
+    public String trabalhar() {
 
-        throw new UnsupportedOperationException("Unimplemented method 'calcularSalario'");
+        return "Sou gerente, " + this.getNome() + "trabalhei hoje";
     }
 
     @Override
-    Sistema equipeQatua() {
+    public String relatarProgresso() {
 
-        throw new UnsupportedOperationException("Unimplemented method 'equipeQatua'");
+        return "Sou gerente, " + this.getNome() + "relatando que hoje encerrei meu turno";
+    }
+
+    @Override
+    public double calcularSalario() {
+
+        return this.getSalario() + this.getBonusAnual();
     }
 
 }

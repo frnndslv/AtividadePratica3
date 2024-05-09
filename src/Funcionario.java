@@ -1,13 +1,14 @@
 
-public abstract class Funcionario {
+public abstract class Funcionario implements Trabalhavel {
     private String nome;
     private String matricula;
+    private double salario;
 
     public Funcionario() {
 
     }
 
-    public Funcionario(String nome, String matricula) {
+    public Funcionario(String nome, String matricula, double salario) {
         this.nome = nome;
     }
 
@@ -27,9 +28,16 @@ public abstract class Funcionario {
         this.matricula = matricula;
     }
 
-    abstract Sistema calcularSalario();
+    public double getSalario() {
+        return salario;
+    }
 
-    abstract Sistema equipeQatua();
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+    public abstract double calcularSalario();
+
 }
 
 // nome e matricula, e método abstrato para

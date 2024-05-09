@@ -1,7 +1,7 @@
 public interface Trabalhavel {
 
-    public float calcularSalario();
+    public String trabalhar();
 
-    public String equipeQfazparte();
+    public String relatarProgresso();
 
 }

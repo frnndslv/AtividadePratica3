@@ -2,11 +2,11 @@ public class Estagiario extends Funcionario {
     private String supervisor;
 
     public Estagiario() {
-        ;
+
     }
 
-    public Estagiario(String nome, String matricula, String supervisor) {
-        super(nome, matricula);
+    public Estagiario(String nome, String matricula, String supervisor, double salario) {
+        super(nome, matricula, salario);
         this.supervisor = supervisor;
     }
 
@@ -19,15 +19,21 @@ public class Estagiario extends Funcionario {
     }
 
     @Override
-    Sistema calcularSalario() {
+    public String trabalhar() {
 
-        throw new UnsupportedOperationException("Unimplemented method 'calcularSalario'");
+        return "Sou estagiario, " + this.getNome() + "trabalhei hoje";
     }
 
     @Override
-    Sistema equipeQatua() {
+    public String relatarProgresso() {
 
-        throw new UnsupportedOperationException("Unimplemented method 'equipeQatua'");
+        return "Sou estagiario, " + this.getNome() + "relatando que hoje encerrei meu turno";
+    }
+
+    @Override
+    public double calcularSalario() {
+
+        return this.getSalario();
     }
 
 }

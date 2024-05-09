@@ -5,8 +5,8 @@ public class Desenvolvedor extends Funcionario {
 
     }
 
-    public Desenvolvedor(String nome, String matricula, String tecQdomina) {
-        super(nome, matricula);
+    public Desenvolvedor(String nome, String matricula, String tecQdomina, double salario) {
+        super(nome, matricula, salario);
         this.tecQdomina = tecQdomina;
     }
 
@@ -19,15 +19,22 @@ public class Desenvolvedor extends Funcionario {
     }
 
     @Override
-    Sistema calcularSalario() {
+    public String trabalhar() {
 
-        throw new UnsupportedOperationException("Unimplemented method 'calcularSalario'");
+        return "Sou programador, " + this.getNome() + "trabalhei hoje";
     }
 
     @Override
-    Sistema equipeQatua() {
+    public String relatarProgresso() {
 
-        throw new UnsupportedOperationException("Unimplemented method 'equipeQatua'");
+        return "Sou programador, " + this.getNome()
+                + "relatando que hoje nao surtei fazendo a atividade em cima da hora,\n porque tive 2 entrevistas de estagio e 2 trabalhos pra entregar no mesmo dia";
+    }
+
+    @Override
+    public double calcularSalario() {
+
+        return this.getSalario();
     }
 
 }

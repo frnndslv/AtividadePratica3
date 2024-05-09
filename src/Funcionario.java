@@ -1,7 +1,7 @@
 
 public abstract class Funcionario {
-    protected String nome;
-    protected String matricula;
+    private String nome;
+    private String matricula;
 
     public Funcionario() {
 
@@ -28,6 +28,8 @@ public abstract class Funcionario {
     }
 
     abstract Sistema calcularSalario();
+
+    abstract Sistema equipeQatua();
 }
 
 // nome e matricula, e método abstrato para

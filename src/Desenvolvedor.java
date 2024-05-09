@@ -24,4 +24,10 @@ public class Desenvolvedor extends Funcionario {
         throw new UnsupportedOperationException("Unimplemented method 'calcularSalario'");
     }
 
+    @Override
+    Sistema equipeQatua() {
+
+        throw new UnsupportedOperationException("Unimplemented method 'equipeQatua'");
+    }
+
 }

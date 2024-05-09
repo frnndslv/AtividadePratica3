@@ -10,9 +10,24 @@ public class Estagiario extends Funcionario {
         this.supervisor = supervisor;
     }
 
+    public String getSupervisor() {
+        return supervisor;
+    }
+
+    public void setSupervisor(String supervisor) {
+        this.supervisor = supervisor;
+    }
+
     @Override
     Sistema calcularSalario() {
 
         throw new UnsupportedOperationException("Unimplemented method 'calcularSalario'");
     }
+
+    @Override
+    Sistema equipeQatua() {
+
+        throw new UnsupportedOperationException("Unimplemented method 'equipeQatua'");
+    }
+
 }

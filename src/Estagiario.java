@@ -1,7 +1,5 @@
-package Models;
-
 public class Estagiario extends Funcionario {
-    String supervisor;
+    private String supervisor;
 
     public Estagiario() {
         ;
@@ -13,7 +11,7 @@ public class Estagiario extends Funcionario {
     }
 
     @Override
-    Array calcularSalario() {
+    Sistema calcularSalario() {
 
         throw new UnsupportedOperationException("Unimplemented method 'calcularSalario'");
     }

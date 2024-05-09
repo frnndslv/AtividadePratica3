@@ -1,8 +1,7 @@
-package Models;
 
-abstract class Funcionario {
-    String nome;
-    String matricula;
+public abstract class Funcionario {
+    protected String nome;
+    protected String matricula;
 
     public Funcionario() {
 
@@ -28,7 +27,7 @@ abstract class Funcionario {
         this.matricula = matricula;
     }
 
-    abstract Array calcularSalario();
+    abstract Sistema calcularSalario();
 }
 
 // nome e matricula, e método abstrato para

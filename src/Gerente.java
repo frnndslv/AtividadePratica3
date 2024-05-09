@@ -1,8 +1,7 @@
-package Models;
 
 public class Gerente extends Funcionario {
-    float bonusAnual;
-    String eqSobGerencia;
+    private float bonusAnual;
+    private String eqSobGerencia;
 
     public Gerente() {
     }
@@ -30,7 +29,7 @@ public class Gerente extends Funcionario {
     }
 
     @Override
-    Array calcularSalario() {
+    Sistema calcularSalario() {
 
         throw new UnsupportedOperationException("Unimplemented method 'calcularSalario'");
     }

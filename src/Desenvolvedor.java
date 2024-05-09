@@ -1,7 +1,5 @@
-package Models;
-
 public class Desenvolvedor extends Funcionario {
-    String tecQdomina;
+    private String tecQdomina;
 
     public Desenvolvedor() {
 
@@ -21,7 +19,7 @@ public class Desenvolvedor extends Funcionario {
     }
 
     @Override
-    Array calcularSalario() {
+    Sistema calcularSalario() {
 
         throw new UnsupportedOperationException("Unimplemented method 'calcularSalario'");
     }

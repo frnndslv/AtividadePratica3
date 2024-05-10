@@ -36,4 +36,11 @@ public class Estagiario extends Funcionario {
         return this.getSalario();
     }
 
+    @Override
+    public String toString() {
+
+        return "\n nome: " + getNome() + "\n matricula: " + getMatricula() + "\n Supervisor: " + getSupervisor()
+                + "\n salario; " + getSalario();
+    }
+
 }

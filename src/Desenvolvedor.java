@@ -37,4 +37,11 @@ public class Desenvolvedor extends Funcionario {
         return this.getSalario();
     }
 
+    @Override
+    public String toString() {
+
+        return "\n nome: " + getNome() + "\n matricula: " + getMatricula() + "\n Linguagem que domina:  "
+                + getTecQdomina() + "\n salario: " + getSalario();
+    }
+
 }

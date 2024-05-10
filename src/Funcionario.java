@@ -1,8 +1,8 @@
 
 public abstract class Funcionario implements Trabalhavel {
-    private String nome;
-    private String matricula;
-    private double salario;
+    protected String nome;
+    protected String matricula;
+    protected double salario;
 
     public Funcionario() {
 
@@ -10,6 +10,8 @@ public abstract class Funcionario implements Trabalhavel {
 
     public Funcionario(String nome, String matricula, double salario) {
         this.nome = nome;
+        this.matricula = matricula;
+        this.salario = salario;
     }
 
     public String getNome() {
@@ -37,6 +39,12 @@ public abstract class Funcionario implements Trabalhavel {
     }
 
     public abstract double calcularSalario();
+
+    @Override
+    public String toString() {
+
+        return "nome : " + getNome() + " matricula: " + getMatricula() + "Salario: " + getSalario();
+    }
 
 }
 

@@ -9,11 +9,16 @@ public class Principal {
         Estagiario estagiario = new Estagiario("carlos", "123456789k", "fernanda", 1.5d);
         Estagiario estagiario2 = new Estagiario("victoer", "12389k", "fernanda", 1.5d);
         Desenvolvedor desenvolvedor = new Desenvolvedor("nanda", " 12345n", "java", 3.5d);
+
         sistema.adcionarFuncionarios(gerente2);
         sistema.adcionarFuncionarios(gerente);
         sistema.adcionarFuncionarios(estagiario);
         sistema.adcionarFuncionarios(estagiario2);
         sistema.adcionarFuncionarios(desenvolvedor);
+
+        sistema.listarFuncionarios();
+        sistema.deletarFuncionarios();
+        sistema.deletarFuncionario("12345f");
 
     }
 }

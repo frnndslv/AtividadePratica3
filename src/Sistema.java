@@ -8,7 +8,7 @@ public class Sistema {
 
     }
 
-    public void deletarFuncionarios(String matricula) {
+    public void deletarFuncionario(String matricula) {
         int indice = -1;
         for (int i = 0; i < funcionario1.size(); i++) {
             if (funcionario1.get(i).getMatricula().equals(matricula)) {
@@ -18,4 +18,19 @@ public class Sistema {
         if (indice != -1)
             funcionario1.remove(indice);
     }
+
+    public void deletarFuncionarios() {
+
+        funcionario1.clear();
+
+    }
+
+    public void listarFuncionarios() {
+
+        for (int i = 0; i < funcionario1.size(); i++) {
+            System.out.println(funcionario1.get(i).toString());
+        }
+
+    }
+
 }

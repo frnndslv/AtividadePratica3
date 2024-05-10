@@ -50,6 +50,7 @@ public class Gerente extends Funcionario {
     public String toString() {
 
         return "\n nome: " + getNome() + "\n matricula:  " + getMatricula() + "\n Bonus anual:  "
-                + getBonusAnual() + "\n equipe que gerencia:  " + getEqSobGerencia() + "\n salario: " + getSalario();
+                + getBonusAnual() + "\n equipe que gerencia:  " + getEqSobGerencia() + "\n salario: "
+                + calcularSalario();
     }
 }

@@ -1,5 +1,7 @@
 
 public class Menuinterativo {
+
+    Sistema sistema = new Sistema();
     /*
      * Desenvolva uma interface de usuário simples no console para interagir com o
      * sistema, permitindo ao usuário adicionar novos funcionários, remover
@@ -16,13 +18,29 @@ public class Menuinterativo {
             System.out.println("digite a opçao desejada: \n");
             System.out.println("1) adicionar funcionario: \n");
             System.out.println("2) remover funcionario: \n");
-            System.out.println("3) escluir todos os funcionario: \n");
-            System.out.println("4) buscar funcionario: \n");
+            System.out.println("3) buscar funcionario: \n");
+            System.out.println("4) excluir todos os funcionario: \n");
+            System.out.println("5) listar todos os funcionarios: \n");
+
             System.out.println("0) finalizar o programa \n");
             op = Console.lerInt();
             switch (op) {
                 case 1:
                     addFuncionario();
+
+                    break;
+                case 2:
+                    removerFuncionario();
+                    break;
+                case 3:
+                    buscarFuncionario();
+                    break;
+                case 4:
+                    excluirTodosFuncionarios();
+
+                    break;
+                case 5:
+                    listarTodosFuncionarios();
 
                     break;
 
@@ -43,10 +61,12 @@ public class Menuinterativo {
             case 1:
                 addGerente();
                 break;
-                addEstagiario();
+            case 2:
+                addDesenvolvedor();
+
                 break;
             case 3:
-
+                addEstagiario();
                 break;
             case 5:
                 exibirMenu();
@@ -59,7 +79,7 @@ public class Menuinterativo {
 
     }
 
-    public Gerente addGerente() {
+    public void addGerente() {
         Gerente gerenteGenerico = new Gerente();
         System.out.println("digite nome: \n");
         gerenteGenerico.setNome(Console.lerString());
@@ -73,11 +93,12 @@ public class Menuinterativo {
         gerenteGenerico.setSalario(Console.lerDouble());
         System.out.println("digite a equipe que gerencia: \n");
         gerenteGenerico.setEqSobGerencia(Console.lerString());
-        return gerenteGenerico;
+
+        sistema.adcionarFuncionarios(gerenteGenerico);
 
     }
 
-    public Estagiario addEstagiario() {
+    public void addEstagiario() {
         Estagiario estagiariogenerico = new Estagiario();
         System.out.println("digite nome: \n");
         estagiariogenerico.setNome(Console.lerString());
@@ -87,11 +108,12 @@ public class Menuinterativo {
         estagiariogenerico.setSupervisor(Console.lerString());
         System.out.println("digite o salario: \n");
         estagiariogenerico.setSalario(Console.lerDouble());
-        return estagiariogenerico;
+
+        sistema.adcionarFuncionarios(estagiariogenerico);
 
     }
 
-    public Desenvolvedor addDesenvolvedor() {
+    public void addDesenvolvedor() {
         Desenvolvedor desenvolvedorgenerico = new Desenvolvedor();
         System.out.println("digite nome: \n");
         desenvolvedorgenerico.setNome(Console.lerString());
@@ -99,7 +121,34 @@ public class Menuinterativo {
         desenvolvedorgenerico.setMatricula(Console.lerString());
         System.out.println("digite o salario: \n");
         desenvolvedorgenerico.setSalario(Console.lerDouble());
-        return desenvolvedorgenerico;
 
+        sistema.adcionarFuncionarios(desenvolvedorgenerico);
+    }
+
+    public void removerFuncionario() {
+
+        System.out.println("Digite a matricula do funcionario a ser removido ");
+        String matricula = Console.lerString();
+        sistema.deletarFuncionario(matricula);
+
+    }
+
+    public void excluirTodosFuncionarios() {
+        sistema.deletarTodosFuncionarios();
+    }
+
+    public void buscarFuncionario() {
+
+        System.out.println("Digite a matricula do funcionario a ser buscado ");
+        String matricula = Console.lerString();
+        String resultado = sistema.buscarFuncionario(matricula);
+        System.out.println(resultado);
+
+    }
+
+    public void listarTodosFuncionarios() {
+        for (int i = 0; i < sistema.funcionario1.size(); i++) {
+            System.out.println(sistema.funcionario1.get(i).toString());
+        }
     }
 }
